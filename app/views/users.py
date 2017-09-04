@@ -9,7 +9,7 @@ def showUsers():
                           'user',
                           'list'))
     if c == 0:
-        render_template('users.html', userslists=out)
+        render_template('users.html', userslist=out)
 
 @users.route('/add')
 def addUsers():
