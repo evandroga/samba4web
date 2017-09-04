@@ -5,7 +5,9 @@ users = Blueprint('users', __name__)
 
 @users.route('/')
 def showUsers():
-    out, c = execProcess('samba-too user list')
+    out, c = execProcess(('samba-too',
+                          'user',
+                          'list'))
     if c == 0:
         render_template('users.html', userslists=out)
 
